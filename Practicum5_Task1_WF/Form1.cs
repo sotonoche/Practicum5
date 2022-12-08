@@ -20,7 +20,7 @@ namespace Practicum5_Task1_WF
         static double f(double x)
         {
             double y = Math.Sqrt(5 - Math.Pow(x, 3));
-            if (double.IsNaN(y)) throw new Exception();
+            if ((5 - Math.Pow(x, 3)) < 0) throw new Exception();
             if (double.IsInfinity(y)) throw new NotFiniteNumberException();
             return y;
         }
@@ -58,7 +58,7 @@ namespace Practicum5_Task1_WF
                 }
                 catch (Exception)
                 {
-                    richTextBox.Text += $"{i}\tНе существует при данном значении\n";
+                    richTextBox.Text += $"{i}\tПри данном значении х, значение под корнем будет отрицательным!\n";
                 }
             }
         }
