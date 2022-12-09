@@ -12,7 +12,6 @@ namespace Practicum5
         {
             double y = Math.Sqrt(5 - Math.Pow(x, 3));
             if ((5 - Math.Pow(x, 3)) < 0) throw new Exception();
-            if (double.IsInfinity(y)) throw new NotFiniteNumberException();
             return y;
         }
         
@@ -49,10 +48,6 @@ namespace Practicum5
                 try
                 {
                     Console.WriteLine($"{i}\t{Math.Round(f(i), 3)}");
-                }
-                catch (NotFiniteNumberException)
-                {
-                    Console.WriteLine($"{i}\tБесконечность");
                 }
                 catch (Exception)
                 {
