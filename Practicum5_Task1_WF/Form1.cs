@@ -21,7 +21,6 @@ namespace Practicum5_Task1_WF
         {
             double y = Math.Sqrt(5 - Math.Pow(x, 3));
             if ((5 - Math.Pow(x, 3)) < 0) throw new Exception();
-            if (double.IsInfinity(y)) throw new NotFiniteNumberException();
             return y;
         }
 
@@ -51,10 +50,6 @@ namespace Practicum5_Task1_WF
                 try
                 {
                     richTextBox.Text += $"{i}\t{Math.Round(f(i), 3)}\n";
-                }
-                catch (NotFiniteNumberException)
-                {
-                    richTextBox.Text += $"{i}\tБесконечность\n";
                 }
                 catch (Exception)
                 {
